@@ -1,0 +1,202 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" x:Class="HackathonProject.MainWindow"
+        Title="Plot And Query" Height="800" Width="1300" Opacity="0.95" Background="White" WindowStyle="ThreeDBorderWindow" >
+    <Window.Resources>
+        <Style x:Key="CustomTabItem" TargetType="{x:Type TabItem}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TabItem}">
+                        <Border x:Name="Border" BorderThickness="1,1,1,0" CornerRadius="0,0,0,0"
+    						Padding="25,5,25,5" Margin="0,0,0,0" BorderBrush="Gainsboro">
+                            <ContentPresenter x:Name="ContentSite" ContentSource="Header" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="TextElement.Foreground" TargetName="ContentSite" Value="White"/>
+                                <Setter Property="TextElement.FontWeight" TargetName="ContentSite" Value="Medium"/>
+                                <Setter Property="TextElement.FontSize" TargetName="ContentSite" Value="19"/>
+                                <Setter TargetName="Border" Property="Background" Value="#887BB8"/>
+                            </Trigger>
+                            <Trigger Property="IsSelected" Value="False">
+                                <Setter Property="TextElement.Foreground" TargetName="ContentSite" Value="White"/>
+                                <Setter Property="TextElement.FontSize" TargetName="ContentSite" Value="15"/>
+                                <Setter Property="TextElement.FontWeight" TargetName="ContentSite" Value="ExtraLight"/>
+                                <Setter TargetName="Border" Property="Background" Value="#887BB8" />
+
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+
+        <Style x:Key="CustomButton" TargetType="{x:Type Button}">
+
+            <Setter Property="Background" Value="White" />
+            <Setter Property="Foreground" Value="#887BB8" />
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="SnapsToDevicePixels" Value="True" />
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border BorderThickness="2" CornerRadius="4" Background="{TemplateBinding Background}" Margin="0,0,0,0">
+                            <Grid>
+                                <!--<Path x:Name="PathIcon" Width="15" Height="25" Stretch="Fill" Fill="#4C87B3" HorizontalAlignment="Left" Margin="17,0,0,0" Data="F1 M 30.0833,22.1667L 50.6665,37.6043L 50.6665,38.7918L 30.0833,53.8333L 30.0833,22.1667 Z "/>-->
+                                <ContentPresenter x:Name="MyContentPresenter" Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" />
+                            </Grid>
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#887BB8" />
+                                <Setter Property="Foreground" Value="White" />
+                                <!--<Setter TargetName="PathIcon" Property="Fill" Value="White" />-->
+                            </Trigger>
+
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="White" />
+                                <Setter Property="Foreground" Value="#887BB8" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="CustomGridViewColumnHeaderStyle1" TargetType="{x:Type GridViewColumnHeader}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type GridViewColumnHeader}">
+                        <Border BorderThickness="0,0,0,1" BorderBrush="#FF6CB7E2" Background="White">
+                            <TextBlock x:Name="ContentHeader" Text="{TemplateBinding Content}" Padding="5,5,5,0" Width="{TemplateBinding Width}" TextAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="OverridesDefaultStyle" Value="True" />
+            <Setter Property="Foreground" Value="#887BB8" />
+            <Setter Property="FontStyle" Value="Normal"/>
+            <Setter Property="FontWeight" Value="Normal"/>
+            <Setter Property="FontFamily" Value="Gadugi" />
+            <Setter Property="FontSize" Value="16" />
+        </Style>
+    </Window.Resources>
+    <Window.Effect>
+        <DropShadowEffect/>
+    </Window.Effect>
+
+
+    <Grid Margin="10,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="750" Width="1270" Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="911*"/>
+            <ColumnDefinition Width="359*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="TestTextBox" HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="550" Height="564" Visibility="Hidden"/>
+        <Label FontSize="40" FontWeight="ExtraLight" FontFamily="Gadugi" Margin="23,27,604,649" Foreground="#887BB8" Content="Plot and Query"/>
+
+        <Image Margin="-30,21,604.373,649" Source="AppData/honeywell_logo.png" Visibility="Hidden" />
+
+        <Grid Margin="10,100,10,10" Background="WhiteSmoke" Grid.ColumnSpan="2" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="451*"/>
+                <ColumnDefinition Width="701*"/>
+            </Grid.ColumnDefinitions>
+
+
+            <Grid Margin="203,0,10,66" Grid.Column="1" Height="564" VerticalAlignment="Bottom">
+                <ListView x:Name="FillData" HorizontalAlignment="Left" Height="197" VerticalAlignment="Top" Width="548" SelectionChanged="FillData_SelectionChanged">
+                    <ListView.View>
+                        <GridView x:Name="FillGrid" ColumnHeaderContainerStyle="{StaticResource CustomGridViewColumnHeaderStyle1}">
+                            <GridViewColumn Header="Time" DisplayMemberBinding="{Binding timeNormal}" Width="150" />
+                            <GridViewColumn Header="Latitude" DisplayMemberBinding="{Binding latitudeDec}" Width="100" />
+                            <GridViewColumn Header="Longitude" DisplayMemberBinding="{Binding longitudeDec}" Width="100" />
+                            <GridViewColumn Header="Activity" DisplayMemberBinding="{Binding ActivityMain}" Width="150" />
+                        </GridView>
+                    </ListView.View>
+                    <ListView.ItemContainerStyle>
+                        <Style TargetType="{x:Type ListViewItem}">
+                            <Setter Property="FontSize" Value="14" />
+                            <Setter Property="Foreground" Value="Black" />
+                            <Setter Property="FontWeight" Value="Light" />
+                            <Setter Property="FontStyle" Value="Normal" />
+                        </Style>
+                    </ListView.ItemContainerStyle>
+                </ListView>
+
+                <TabControl TabStripPlacement="Top" Margin="0,202,0,0" >
+                    <TabItem x:Name="UploadTab" Style="{DynamicResource CustomTabItem}" Header="Upload" Margin="0,0,0,0" Width="271">
+                        <Grid Background="WhiteSmoke"  Margin="10">
+
+                            <Label FontSize="14" FontWeight="Thin" FontFamily="Gadugi" Margin="50,76,50,170" Foreground="#887BB8" Content="Copy Path Here"/>
+                            <TextBox x:Name="PathLocationTextBox" TextWrapping="Wrap"  Margin="50,110,162,155"  FontSize="11" FontWeight="Thin" FontFamily="Gadugi" BorderBrush="#887BB8" BorderThickness="2" />
+                            <Button x:Name="OpenButton"  Margin="365,102,50,155" Style="{DynamicResource CustomButton}" Click="OpenButton_Click" RenderTransformOrigin="0.53,0.798" Content="Open"/>
+
+                            <Button x:Name="UploadButton"  Margin="50,184,50,62" Style="{DynamicResource CustomButton}" Click="UploadButton_Click" Content="Upload"/>
+                            <Button x:Name="AddToExistingButton" Margin="50,241,50,10" Style="{DynamicResource CustomButton}" Click="AddToExistingButton_Click" Content="Add to Existing"/>
+                            <Label x:Name="UploadErrorLabel" FontSize="14" FontWeight="Thin" FontFamily="Gadugi" Margin="88,148,92,101" Foreground="#EB6E6C" RenderTransformOrigin="0.5,0.5" Content="Error Occured, Please Try Again Or Check File Format!" Visibility="Hidden"/>
+
+
+
+                        </Grid>
+                    </TabItem>
+                    <TabItem x:Name="FilteringTab" Style="{DynamicResource CustomTabItem}" Header="Filter" Margin="0,0,0,0" Width="271" >
+                        <Grid Background="WhiteSmoke" >
+                            <TabControl TabStripPlacement="Top" Margin="10,10,10,10" >
+                                <TabItem x:Name="TimeTab" Style="{DynamicResource CustomTabItem}" Header="Time" Margin="0,0,0,0" Width="171">
+                                    <Grid Margin="10" Background="WhiteSmoke">
+
+                                        <Label FontSize="11" FontWeight="ExtraLight" FontFamily="Gadugi" Margin="151,0,-51,253" Foreground="DarkGray" RenderTransformOrigin="0.5,0.5" Content="YYYY-MM-DD HH:MM:SS"/>
+
+                                        <Label FontSize="14" FontWeight="Thin" FontFamily="Gadugi" Margin="100,22,345,160" Foreground="#887BB8" RenderTransformOrigin="0.5,0.5" Content="From"/>
+                                        <xctk:DateTimePicker x:Name="FromDatePicker" HorizontalAlignment="Left" Margin="151,25,0,0" VerticalAlignment="Top" Width="245" Background="White" BorderBrush="#FF887BB8" Maximum="12/31/2100 23:59:00" Height="21"/>
+
+                                        <Label FontSize="14" FontWeight="Thin" FontFamily="Gadugi" Margin="100,60,366,129" Foreground="#887BB8" RenderTransformOrigin="0.5,0.5" Content="To"/>
+                                        <xctk:DateTimePicker x:Name="ToDatePicker" HorizontalAlignment="Left" Margin="151,65,0,0" VerticalAlignment="Top" Width="245" Background="White" BorderBrush="#FF887BB8" Maximum="12/31/2100 23:59:00" Height="21"/>
+
+
+
+                                        <Button x:Name="FilterButton"   Style="{DynamicResource CustomButton}" Margin="100,103,100,84" RenderTransformOrigin="0.5,0.5" Content="Filter" Click="FilterButton_Click"/>
+                                        <Button x:Name="ResetFilterButton" Margin="50,164,50,10" Style="{DynamicResource CustomButton}" Click="ResetFilterButton_Click" RenderTransformOrigin="0.5,0.5" Content="Reset Filters"/>
+
+
+
+                                    </Grid>
+
+                                </TabItem>
+
+                                <TabItem x:Name="LocationTab" Style="{DynamicResource CustomTabItem}" Header="Location" Margin="0,0,0,0" Width="171">
+                                    <Grid Background="WhiteSmoke"  Margin="10">
+                                        <Button x:Name="ResolveReplicationsButton" Margin="50,116,50,61" Style="{DynamicResource CustomButton}" Click="ResolveReplicationsButton_Click" RenderTransformOrigin="0.5,0.5" Content="Resolve Replicated Locations"/>
+                                        <Label  FontSize="14" FontWeight="Thin" FontFamily="Gadugi" Margin="85,39,50,145" Foreground="#887BB8" RenderTransformOrigin="0.5,0.5" Content="Move Slider To The Right to Decrease Radial Resolution" />
+                                        <xctk:RangeSlider x:Name="AccuracySlider" HorizontalAlignment="Left" Margin="41,69,0,0" VerticalAlignment="Top" HigherValue="4" Maximum="7" Width="424"/>
+                                        <Button x:Name="ResetFilterLocationsButton" Margin="50,178,50,5" Style="{DynamicResource CustomButton}" Content="Reset Filters" Click="ResetFilterLocationsButton_Click" RenderTransformOrigin="0.5,0.5"/>
+                                    </Grid>
+                                </TabItem>
+
+                                <TabItem x:Name="ActivityTab" Style="{DynamicResource CustomTabItem}" Header="Activity" Margin="0,0,0,0" Width="175">
+                                    <Grid Background="WhiteSmoke"  Margin="10">
+                                        <TextBox x:Name="ActivityTextBox"  Margin="100,80,100,124" TextWrapping="Wrap" Background="White" BorderBrush="#FF887BB8" BorderThickness="2" TextChanged="ActivityTextBox_TextChanged" RenderTransformOrigin="0.5,0.5" />
+                                        <Label  FontSize="14" FontWeight="Thin" FontFamily="Gadugi" Margin="165,49,171,135" Foreground="#887BB8" RenderTransformOrigin="0.5,0.5" Content="Enter Activity To Search" />
+                                        <Label x:Name="ActivitySearchErrorLabel"  FontSize="14" FontWeight="Thin" FontFamily="Gadugi" Margin="165,110,171,72" Foreground="#EB6E6C" RenderTransformOrigin="0.5,0.5" Content="Empty or Invalid String!" Visibility="Hidden"/>
+                                    </Grid>
+                                </TabItem>
+                            </TabControl>
+                        </Grid>
+                    </TabItem>
+
+                </TabControl>
+
+
+
+
+            </Grid>
+
+            <WebBrowser x:Name="webBrowser1"  Loaded="setupObjectForScripting" HorizontalAlignment="Left" Height="619" Margin="10,10,0,0" VerticalAlignment="Top" Width="677" Opacity="0.8" Grid.ColumnSpan="2"/>
+            <Button x:Name="AddMarkerButton"  Content="Add Markers" Margin="202,579,10,10" Click="AddMarkerButton_Click" Style="{DynamicResource CustomButton}" Grid.Column="1"/>
+        </Grid>
+    </Grid>
+</Window>

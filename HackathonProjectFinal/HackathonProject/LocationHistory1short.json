@@ -1,0 +1,117 @@
+{
+    "locations": [
+        
+       
+        {
+            "timestampMs": "1489671858783",
+            "activity": [
+                {
+                    "type": "TILTING",
+                    "confidence": 100
+                }
+            ]
+        },
+        {
+            "timestampMs": "1489671736526",
+            "activity": [
+                {
+                    "type": "UNKNOWN",
+                    "confidence": 48
+                },
+                {
+                    "type": "IN_VEHICLE",
+                    "confidence": 42
+                },
+                {
+                    "type": "STILL",
+                    "confidence": 6
+                },
+                {
+                    "type": "ON_BICYCLE",
+                    "confidence": 4
+                }
+            ]
+        },
+        {
+            "timestampMs": "1489671593173",
+            "activity": [
+                {
+                    "type": "STILL",
+                    "confidence": 72
+                },
+                {
+                    "type": "IN_VEHICLE",
+                    "confidence": 23
+                },
+                {
+                    "type": "UNKNOWN",
+                    "confidence": 5
+                }
+            ]
+        },
+        {
+            "timestampMs": "1489662183914",
+            "activity": [
+                {
+                    "type": "STILL",
+                    "confidence": 100
+                }
+            ]
+        },
+        {
+            "timestampMs": "1489661615036",
+            "activity": [
+                {
+                    "type": "TILTING",
+                    "confidence": 100
+                }
+            ]
+        },
+        {
+            "timestampMs": "1489661046157",
+            "activity": [
+                {
+                    "type": "STILL",
+                    "confidence": 85
+                },
+                {
+                    "type": "IN_VEHICLE",
+                    "confidence": 13
+                },
+                {
+                    "type": "UNKNOWN",
+                    "confidence": 3
+                }
+            ]
+        },
+        {
+            "timestampMs": "1489654936490",
+            "activity": [
+                {
+                    "type": "UNKNOWN",
+                    "confidence": 77
+                },
+                {
+                    "type": "ON_FOOT",
+                    "confidence": 10
+                },
+                {
+                    "type": "WALKING",
+                    "confidence": 10
+                },
+                {
+                    "type": "IN_VEHICLE",
+                    "confidence": 6
+                },
+                {
+                    "type": "ON_BICYCLE",
+                    "confidence": 6
+                },
+                {
+                    "type": "STILL",
+                    "confidence": 2
+                }
+            ]
+        }
+    ]
+  }

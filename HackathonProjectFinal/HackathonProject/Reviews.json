@@ -1,0 +1,252 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        
+        {
+            "geometry": {
+                "coordinates": [ 78.5488020, 17.3723193 ],
+                "type": "Point"
+            },
+            "properties": {
+                "Google Maps URL": "http://maps.google.com/?cid=7603709755092871505",
+                "Location": {
+                    "Address": "Kothapet-RK Puram Rd, Kothapet, Hyderabad, Telangana 500035, India",
+                    "Business Name": "Sowbhagya Puram Park",
+                    "Country Code": "IN",
+                    "Geo Coordinates": {
+                        "Latitude": "17.3723193",
+                        "Longitude": "78.5488020"
+                    }
+                },
+                "Published": "2017-02-03T14:15:48Z",
+                "Review Comment": "A park for a walk or playing badminton, good place to waste some time",
+                "Star Rating": 4,
+                "Updated": "2017-02-03T14:16:32Z"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [ 74.7839865, 13.3571123 ],
+                "type": "Point"
+            },
+            "properties": {
+                "Google Maps URL": "http://maps.google.com/?cid=9374498004038811036",
+                "Location": {
+                    "Address": "End Point Road, Vidyaratna Nagar, Manipal, Karnataka 576104, India",
+                    "Business Name": "Sizzler Ranch",
+                    "Country Code": "IN",
+                    "Geo Coordinates": {
+                        "Latitude": "13.3571123",
+                        "Longitude": "74.7839865"
+                    }
+                },
+                "Published": "2017-01-16T15:23:31Z",
+                "Review Comment": "Very bad service",
+                "Star Rating": 2,
+                "Updated": "2017-02-03T14:15:31Z"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [ 78.3867421, 17.4343615 ],
+                "type": "Point"
+            },
+            "properties": {
+                "Google Maps URL": "http://maps.google.com/?cid=733247840044430544",
+                "Location": {
+                    "Address": "S No. 64, APIIC Software Layout, Inorbit Mall Road, Mindspace, Madhapur, Hyderabad, Telangana 500081, India",
+                    "Business Name": "Inorbit Mall",
+                    "Country Code": "IN",
+                    "Geo Coordinates": {
+                        "Latitude": "17.4343615",
+                        "Longitude": "78.3867421"
+                    }
+                },
+                "Published": "2017-02-03T14:14:41Z",
+                "Review Comment": "This mall is crowded but otherwise, it is pretty enjoyable",
+                "Star Rating": 3,
+                "Updated": "2017-02-03T14:15:06Z"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [ 78.4036540, 17.4339850 ],
+                "type": "Point"
+            },
+            "properties": {
+                "Google Maps URL": "http://maps.google.com/?cid=11970631856294280292",
+                "Location": {
+                    "Address": "Plot No. 797, 4th Floor, Araka Prime, Road No. 36, Jubilee Hills, Hyderabad, Telangana 500033, India",
+                    "Business Name": "Barbeque Nation",
+                    "Country Code": "IN",
+                    "Geo Coordinates": {
+                        "Latitude": "17.4339850",
+                        "Longitude": "78.4036540"
+                    }
+                },
+                "Published": "2017-02-03T14:13:56Z",
+                "Review Comment": "It's not just food, it's an experience",
+                "Star Rating": 5,
+                "Updated": "2017-02-03T14:14:22Z"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [ 78.3441414, 17.4187400 ],
+                "type": "Point"
+            },
+            "properties": {
+                "Google Maps URL": "http://maps.google.com/?cid=11671205117150752254",
+                "Location": {
+                    "Address": "Survey No. 115, 11, Road Number 2, Financial District, Nanakram Guda, Hyderabad, Telangana 500032, India",
+                    "Business Name": "Honeywell Technology Solutions",
+                    "Country Code": "IN",
+                    "Geo Coordinates": {
+                        "Latitude": "17.4187400",
+                        "Longitude": "78.3441414"
+                    }
+                },
+                "Published": "2017-02-03T14:13:45Z",
+                "Star Rating": 5,
+                "Updated": "2017-02-03T14:13:45Z"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [ 78.4659608, 17.4130407 ],
+                "type": "Point"
+            },
+            "properties": {
+                "Google Maps URL": "http://maps.google.com/?cid=1119683835166944388",
+                "Location": {
+                    "Address": "Necklace Road, Khairatabad, Hyderabad, Telangana 500004, India",
+                    "Business Name": "Prasads Imax",
+                    "Country Code": "IN",
+                    "Geo Coordinates": {
+                        "Latitude": "17.4130407",
+                        "Longitude": "78.4659608"
+                    }
+                },
+                "Published": "2017-01-16T15:24:04Z",
+                "Star Rating": 3,
+                "Updated": "2017-01-16T15:24:04Z"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [ 74.7798367, 13.3482212 ],
+                "type": "Point"
+            },
+            "properties": {
+                "Google Maps URL": "http://maps.google.com/?cid=17920020469507798135",
+                "Location": {
+                    "Address": "5th Main Road, VP Nagar, Hayagreeva Nagar, Udupi, Karnataka 576104, India",
+                    "Business Name": "Prax Restaurant",
+                    "Country Code": "IN",
+                    "Geo Coordinates": {
+                        "Latitude": "13.3482212",
+                        "Longitude": "74.7798367"
+                    }
+                },
+                "Published": "2017-01-16T15:23:52Z",
+                "Star Rating": 3,
+                "Updated": "2017-01-16T15:23:52Z"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [ 74.7836274, 13.3569997 ],
+                "type": "Point"
+            },
+            "properties": {
+                "Google Maps URL": "http://maps.google.com/?cid=3685404342745642967",
+                "Location": {
+                    "Address": "Vidyaratna Nagar, Manipal, Karnataka 576104, India",
+                    "Business Name": "Mandavi Emerald",
+                    "Country Code": "IN",
+                    "Geo Coordinates": {
+                        "Latitude": "13.3569997",
+                        "Longitude": "74.7836274"
+                    }
+                },
+                "Published": "2017-01-16T15:23:42Z",
+                "Star Rating": 4,
+                "Updated": "2017-01-16T15:23:42Z"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [ 74.7829016, 13.3491639 ],
+                "type": "Point"
+            },
+            "properties": {
+                "Google Maps URL": "http://maps.google.com/?cid=6618909116637102434",
+                "Location": {
+                    "Address": "1st Floor, Central Cinemas, Laxmindra Nagar, Udupi Main Road, Manipal, Karnataka 576104, India",
+                    "Business Name": "Inox Cinemas",
+                    "Country Code": "IN",
+                    "Geo Coordinates": {
+                        "Latitude": "13.3491639",
+                        "Longitude": "74.7829016"
+                    }
+                },
+                "Published": "2017-01-16T15:23:15Z",
+                "Star Rating": 4,
+                "Updated": "2017-01-16T15:23:15Z"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [ 77.6403055, 12.9703179 ],
+                "type": "Point"
+            },
+            "properties": {
+                "Google Maps URL": "http://maps.google.com/?cid=13857158954099311178",
+                "Location": {
+                    "Address": "Door no 957, 12th Main, Opp. Gold's Gym, Indira Nagar, Bengaluru, Karnataka 560038, India",
+                    "Business Name": "Mother Cluckers",
+                    "Country Code": "IN",
+                    "Geo Coordinates": {
+                        "Latitude": "12.9703179",
+                        "Longitude": "77.6403055"
+                    }
+                },
+                "Published": "2017-01-16T15:23:03Z",
+                "Star Rating": 5,
+                "Updated": "2017-01-16T15:23:03Z"
+            },
+            "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [ 77.6705360, 12.9289727 ],
+                "type": "Point"
+            },
+            "properties": {
+                "Google Maps URL": "http://maps.google.com/?cid=1510949169086759135",
+                "Location": {
+                    "Address": "Green Glen Layout, Bellandur, Bengaluru, Karnataka 560103, India",
+                    "Business Name": "Sobha Dahlia",
+                    "Country Code": "IN",
+                    "Geo Coordinates": {
+                        "Latitude": "12.9289727",
+                        "Longitude": "77.6705360"
+                    }
+                },
+                "Published": "2017-01-16T15:22:39Z",
+                "Star Rating": 4,
+                "Updated": "2017-01-16T15:22:39Z"
+            },
+            "type": "Feature"
+        }
+    ]
+}
